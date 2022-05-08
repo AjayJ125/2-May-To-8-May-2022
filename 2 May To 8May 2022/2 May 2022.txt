@@ -1,0 +1,59 @@
+Q.1) Find the second minimum element in the array .
+   
+    1st) 
+     public class FindSecondMinimumInAnArray {
+
+	public static void main(String[] args) {
+		int[] arr = {25,66,84,42,31,74,23};
+		findSecondMin(arr);
+	}
+
+	private static void findSecondMin(int[] arr) {
+		for(int i=0; i<arr.length; i++) {
+			for(int j=i+1; j<arr.length; j++) {
+				if(arr[i]>arr[j]) {
+					int temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+			}
+			//System.out.print(arr[i]+" ");
+		}
+		System.out.println("Second minimum element in array is = "+arr[1]);
+		
+	}
+
+}
+
+
+
+    2nd)
+
+    public class FindSecondMinimumInAnArray {
+
+	public static void main(String[] args) {
+		int[] arr = {25,66,84,42,31,74,23};
+		findSecondMinimum(arr);
+	}
+
+	private static void findSecondMinimum(int[] arr) {
+		Arrays.sort(arr);
+		System.out.println(" Second minimum element in array is = "+arr[1]);
+		
+	}
+   }
+         
+
+
+------------------------------***----------------------------------------------
+2. Find the frequency of each String in the array
+{""India"", ""Australia"",""India"",""Japan""}
+
+Output 
+India - 2
+Australia - 1
+Japan - 1"
+
+
+
+------------------------------***----------------------------------------------

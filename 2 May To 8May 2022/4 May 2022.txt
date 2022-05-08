@@ -1,0 +1,48 @@
+Q.1)  Find the squares of a sorted array
+      https://www.geeksforgeeks.org/sort-array-converting-elements-squares/
+
+
+import java.util.Arrays;
+
+public class FindUniqueElementsInAnArray {
+
+	public static void main(String[] args) {
+		int[] arr = {1,2,3,4,5};
+		int product = 1;
+		Arrays.sort(arr);
+		
+		for(int i=0; i<arr.length; i++) {
+			arr[i] = arr[i] * arr[i];
+		}
+		System.out.print(Arrays.toString(arr));
+	}
+
+}
+
+
+
+-------------------------------------***---------------------------------------------
+Q.2)  Sum of Unique elements
+      https://leetcode.com/problems/sum-of-unique-elements/"
+
+      public class FindUniqueElementsInAnArray {
+
+	public static void main(String[] args) {
+		int[] arr = {1,2,3,4,5};
+		int sum = arr[0];
+		Arrays.sort(arr);
+		
+		for(int i=0; i<arr.length-1; i++) {
+			
+				if(arr[i] != arr[i+1] ) {
+					sum = sum + arr[i+1];
+				}			
+		}
+		System.out.println(sum);
+	}
+
+}
+
+
+
+-------------------------------------***---------------------------------------------

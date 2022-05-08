@@ -1,0 +1,35 @@
+
+Q.1) Roatating the String check
+https://practice.geeksforgeeks.org/problems/check-if-string-is-rotated-by-two-places-1587115620/1"
+
+
+     public class CheckStringIsRotetedByTwoPlace {
+
+	public static void main(String[] args) {
+		String str1 = "amazon";
+		String str2 = "azonam";
+		
+		boolean b = isRotated(str1,str2);
+		System.out.println(b);
+		
+		String str3 = "amazon";
+		String str4 = "amazon";
+		
+		boolean b2 = isRotated(str3,str4);
+		System.out.println(b2);
+
+	}
+	public static boolean isRotated(String str1, String str2)
+    {
+        String temp=str1;
+        temp = temp.substring(str1.length()-2,str1.length()) + str1.substring(0,str1.length()-2);
+        str1 = str1.substring(2,str1.length()) + str1.substring(0,2);
+        if(str1.equals(str2) || temp.equals(str2)) {
+        	return true;
+        }
+            
+        return false;
+    }
+
+}
+-----------------------------------------------***--------------------------------------------------------------------

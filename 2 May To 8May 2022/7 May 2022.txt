@@ -1,0 +1,71 @@
+Q.1) Product of Array without itself
+https://practice.geeksforgeeks.org/problems/product-array-puzzle4525/1
+      /?page=1&difficulty[]=0&category[]=Arrays&sortBy=submissions
+
+     public class ProductOfArrayWithoutItSelf {
+	
+	public static void main(String[] args){
+        int arr[] = {1,2,3,4,5};
+        productArrayItSelf(arr);
+    }
+
+	private static void productArrayItSelf(int arr[]){
+		
+        if (arr.length == 1) {
+            System.out.print("0");
+        }
+ 
+        int i, prod = 1;
+        int temp[] = new int[arr.length];
+        for (int j = 0; j <arr.length; j++) {
+            temp[j] = 1;
+        }
+ 
+        for (i = 0; i<arr.length; i++) {
+            temp[i] = prod;
+            prod *= arr[i];
+        }
+ 
+        prod = 1;
+ 
+        for (i = arr.length - 1; i >= 0; i--) {
+            temp[i] *= prod;
+            prod *= arr[i];
+        }
+ 
+        for (i = 0; i <arr.length; i++) {
+            System.out.print(temp[i] + " ");
+        }
+        
+    }
+}
+
+
+
+-----------------------------***----------------------------------------
+Q.2) Peak element 
+     https://practice.geeksforgeeks.org/problems/peak-element/1"
+
+
+     public class PeakElement {
+
+	public static void main(String[] args) {
+		int[] arr = {3,4};
+		int p = peakElement(arr);
+		System.out.println(p);
+	}
+	private static int peakElement(int arr[])
+	{
+		int i;
+
+	   for(i=0;i<arr.length-1;i++){
+	       if(arr[i]>arr[i+1]){
+	           return i;
+	       }
+	}
+	return i;
+	
+	}
+
+}
+-----------------------------***----------------------------------------
